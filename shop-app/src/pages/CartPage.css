@@ -1,0 +1,100 @@
+.cart-page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.cart-page h2 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 25px;
+}
+
+.cart-items-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dee2e6; /* Lighter border */
+  padding: 20px 0;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+  background-color: #f8f9fa; /* Slight hover effect on item */
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 100px; /* Larger image */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 1px solid #eee;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.15em;
+  color: #343a40;
+}
+.cart-item-details p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.95em;
+}
+
+.remove-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.cart-summary {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+  text-align: right;
+}
+
+.cart-summary h3 {
+  font-size: 1.5em;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.checkout-button {
+  background-color: #007bff;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  /* Utilise le style .button global, pas besoin de surcharger ici si .button est bien défini */
+}
+
+/* Style pour le message panier vide et lien */
+.cart-page a.button {
+  margin-top: 20px;
+}

@@ -1,0 +1,102 @@
+/* App.css for shop-app - Modern Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #212529; /* Darker text for readability */
+  line-height: 1.6;
+}
+
+.App {
+  text-align: center;
+}
+
+/* ShopHeader Styles */
+header {
+  background-color: #ffffff;
+  color: #333;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #007bff; /* Primary color for branding */
+}
+
+/* ShopNavigation Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Supposant une logique active future */
+  color: #0056b3;
+  border-bottom-color: #0056b3;
+}
+
+/* Main content area */
+main {
+  padding: 20px;
+  min-height: calc(100vh - 150px); /* Adjust based on header/footer */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ShopFooter Styles */
+footer {
+  background-color: #343a40; /* Dark footer */
+  color: #f8f9fa; /* Light text on dark footer */
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* General Button Style (can be overridden) */
+.button, button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white !important; /* Important pour surcharger les liens stylés en bouton */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover, button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
