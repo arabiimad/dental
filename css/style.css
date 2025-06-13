@@ -1,0 +1,123 @@
+/* Basic styling for the website */
+
+/* Color Palette */
+:root {
+    --primary-color: #2c3e50; /* Dark Blue */
+    --secondary-color: #3498db; /* Medium Blue */
+    --accent-color: #e67e22; /* Vibrant Orange */
+    --light-gray: #ecf0f1; /* Light Gray */
+    --dark-gray: #34495e; /* Dark Gray */
+    --white-color: #ffffff;
+    --text-color: #333;
+}
+
+/* Typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer sticks to bottom */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+/* Layout Structure */
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+header h1 {
+    margin: 0;
+    color: var(--white-color); /* Ensure header h1 is white */
+    padding-top: 10px; /* Add some padding if nav is above */
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    /* margin-top: 10px; Removed as h1 has padding now */
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    color: var(--accent-color); /* Accent color on hover */
+}
+
+main {
+    flex: 1; /* Allows main content to grow and push footer down */
+    padding: 20px;
+    background-color: var(--light-gray); /* Light background for content area */
+    /* text-align: center; Align text within container instead */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--dark-gray);
+    color: var(--white-color);
+    width: 100%;
+}
+
+/* Container for better content alignment */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center text within the container */
+}
+
+/* Buttons */
+.button, button {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover, button:hover {
+    background-color: #d35400; /* Darker shade of accent-color */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Fade-in Animation */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
